@@ -3,37 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
   <title>Frontend Mentor | Interactive pricing component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
-
-  Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
+  <header class="header">
+    <h1 class="header__title">Simple, traffic-based pricing</h1>
+    <p class="header__info">Sign-up for our 30-day trial. No credit card required.</p>
+  </header>
   
-  <div class="attribution">
+<main>
+  <article class="card">
+    <div class="card__header">
+      <h2 class="card__title">100k Pageviews</h2>
+      <div class="card__bar"></div>
+    </div>
+    <div class="card__body">
+      <h2 class="card__price">$16.00 <span class="card__month">$ /month</span> </h2>
+      <span>Monthly Billing</span> <span></span><span>Yearly Billing 25% discount</span>
+    </div>
+    <footer class="card__footer">
+      <p> Unlimited websites</p>
+      <p> 100% data ownership</p>
+      <p> Email reports</p>
+      <a href="#"> Start my trial</a>
+    </footer>
+  </article>
+</main>
+
+  
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>
