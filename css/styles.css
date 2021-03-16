@@ -66,25 +66,37 @@ body{
   margin-bottom: 35px;
 }
 .card__bar{
+  position: relative;
   height: 10px;
   width: 90%;
   margin-right: auto;
   margin: auto;
   background-color: var(--Light-Grayish-Blue);
   border-radius: 5px;
-  position: relative;
+}
+.card--fill{
+  position: absolute;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+  height: 10px;
+  width: 0;
+  background-color: var(--Strong-Cyan);
 }
 .card__icon{
+  display: block;
   position:relative;
-  width: 40px;
-  height: 20px;
-  top: -5px;
+  height: 25px;
+  top: -10px;
   left: 50%;
   transform: translateX(-50%);
 }
-.card__bar::before{
-  content: '';
-  display: block;
+.card--img{
+  position: absolute;
+  left: 0;
+  /* transform: translateX(-220px); */
+}
+.circle{
   position: absolute;
   width: 50px;
   height: 50px;
@@ -94,6 +106,9 @@ body{
   top: -20px;
   left: 50%;
   transform: translateX(-50%);
+}
+.circle--active{
+  background-color: var(--Strong-Cyan);
 }
 .card__body{
   margin-top: 40px;
@@ -157,6 +172,7 @@ body{
 .card__yearly{
   position: relative;
 }
+
 .card__yearly::after{
   content: '-25%';
   position: absolute;
@@ -192,8 +208,30 @@ body{
   background-position: 70px;
 }
 @media screen and (min-width:1024px) {
+  .card__billing{
+    margin-right: 15px;
+  }
+  .card__yearly{
+    margin-left: 15px;
+  }
   .card__footers {
     background-position: left;
+  }
+  .card__yearly::after{
+    width: 55px;
+    right: -60px;
+  }
+  .card__toggle{
+    cursor: pointer;
+  }
+  .card__toggle--active::after {
+    transform: translateX(20%);
+  }
+  .card__toggle:hover{
+    background-color: var(--Strong-Cyan);
+  }
+  .card__bar::before{
+    cursor: pointer;
   }
 }
 .card__button{
@@ -204,4 +242,12 @@ body{
   color: var(--Grayish);
   padding: 1em;
   border-radius: 25px;
+}
+@media screen and (min-width:1024px){
+  .card__button{
+    cursor: pointer;
+  }
+  .card__button:hover{
+    color: #fff;
+  }
 }
